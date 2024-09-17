@@ -1,0 +1,19 @@
+{
+    "name": "bill-app",
+    "version": "1.0.0",
+    "scripts": {
+        "install-all": "npm install && npm run install-back && npm run install-front",
+        "install-back": "cd Billed-app-FR-Back && npm install",
+        "install-front": "cd Billed-app-FR-Front && npm install && npm install -g live-server",
+        "start": "concurrently \"npm run back\" \"npm run front\"",
+        "back": "cd Billed-app-FR-Back && npm run run:dev",
+        "front": "cd Billed-app-FR-Front && live-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Cedric-Royer/bill-app.git"
+      },
+    "devDependencies": {
+        "concurrently": "^7.6.0"
+    }
+}
